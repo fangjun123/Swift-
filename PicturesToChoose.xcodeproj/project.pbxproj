@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		484571C51D878CB000D69175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484571C41D878CB000D69175 /* AppDelegate.swift */; };
-		484571C71D878CB000D69175 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484571C61D878CB000D69175 /* ViewController.swift */; };
-		484571CA1D878CB000D69175 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484571C81D878CB000D69175 /* Main.storyboard */; };
 		484571CC1D878CB100D69175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484571CB1D878CB100D69175 /* Assets.xcassets */; };
 		484571CF1D878CB100D69175 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484571CD1D878CB100D69175 /* LaunchScreen.storyboard */; };
 		484571DA1D878CB100D69175 /* PicturesToChooseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484571D91D878CB100D69175 /* PicturesToChooseTests.swift */; };
 		484571E51D878CB100D69175 /* PicturesToChooseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484571E41D878CB100D69175 /* PicturesToChooseUITests.swift */; };
+		484571F31D879B3C00D69175 /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484571F21D879B3C00D69175 /* PhotoSelectViewController.swift */; };
+		484571F51D87D73D00D69175 /* UIImage+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484571F41D87D73D00D69175 /* UIImage+Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +36,6 @@
 /* Begin PBXFileReference section */
 		484571C11D878CB000D69175 /* PicturesToChoose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicturesToChoose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		484571C41D878CB000D69175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		484571C61D878CB000D69175 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		484571C91D878CB000D69175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		484571CB1D878CB100D69175 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		484571CE1D878CB100D69175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		484571D01D878CB100D69175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +45,8 @@
 		484571E01D878CB100D69175 /* PicturesToChooseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicturesToChooseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		484571E41D878CB100D69175 /* PicturesToChooseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesToChooseUITests.swift; sourceTree = "<group>"; };
 		484571E61D878CB100D69175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		484571F21D879B3C00D69175 /* PhotoSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectViewController.swift; sourceTree = "<group>"; };
+		484571F41D87D73D00D69175 /* UIImage+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Category.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				484571C41D878CB000D69175 /* AppDelegate.swift */,
-				484571C61D878CB000D69175 /* ViewController.swift */,
-				484571C81D878CB000D69175 /* Main.storyboard */,
+				484571F21D879B3C00D69175 /* PhotoSelectViewController.swift */,
+				484571F41D87D73D00D69175 /* UIImage+Category.swift */,
 				484571CB1D878CB100D69175 /* Assets.xcassets */,
 				484571CD1D878CB100D69175 /* LaunchScreen.storyboard */,
 				484571D01D878CB100D69175 /* Info.plist */,
@@ -231,7 +231,6 @@
 			files = (
 				484571CF1D878CB100D69175 /* LaunchScreen.storyboard in Resources */,
 				484571CC1D878CB100D69175 /* Assets.xcassets in Resources */,
-				484571CA1D878CB000D69175 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +255,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				484571C71D878CB000D69175 /* ViewController.swift in Sources */,
+				484571F51D87D73D00D69175 /* UIImage+Category.swift in Sources */,
 				484571C51D878CB000D69175 /* AppDelegate.swift in Sources */,
+				484571F31D879B3C00D69175 /* PhotoSelectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		484571C81D878CB000D69175 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				484571C91D878CB000D69175 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		484571CD1D878CB100D69175 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
